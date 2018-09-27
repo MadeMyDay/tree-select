@@ -8,6 +8,7 @@ import Dialog from 'rc-dialog';
 import TreeSelect, { TreeNode, SHOW_PARENT } from 'rc-tree-select';
 import { gData } from './util';
 import './demo.less';
+import 'rc-tree-select/assets/select.less';
 
 function isLeaf(value) {
   if (!value) {
@@ -231,9 +232,9 @@ class Demo extends React.Component {
           transitionName="rc-tree-select-dropdown-slide-up"
           choiceTransitionName="rc-tree-select-selection__choice-zoom"
           dropdownStyle={{ maxHeight: 200, overflow: 'auto' }}
-          placeholder={<i>请下拉选择</i>}
+          placeholder={<span>MUI</span>}
           searchPlaceholder="please search"
-          multiple
+          multiple showSearch allowClear treeLine
           value={this.state.multipleValue}
           treeData={gData}
           treeNodeFilterProp="title"
