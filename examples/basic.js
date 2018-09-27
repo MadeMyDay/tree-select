@@ -1,6 +1,7 @@
 /* eslint react/no-multi-comp:0, no-console:0, no-alert: 0 */
 
 import 'rc-tree-select/assets/index.less';
+import 'rc-tree-select/assets/select.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'rc-dialog/assets/index.css';
@@ -8,7 +9,6 @@ import Dialog from 'rc-dialog';
 import TreeSelect, { TreeNode, SHOW_PARENT } from 'rc-tree-select';
 import { gData } from './util';
 import './demo.less';
-import 'rc-tree-select/assets/select.less';
 
 function isLeaf(value) {
   if (!value) {
@@ -234,7 +234,7 @@ class Demo extends React.Component {
           dropdownStyle={{ maxHeight: 200, overflow: 'auto' }}
           placeholder={<span>MUI</span>}
           searchPlaceholder="please search"
-          multiple showSearch allowClear treeLine
+          multiple showSearch treeLine
           value={this.state.multipleValue}
           treeData={gData}
           treeNodeFilterProp="title"
